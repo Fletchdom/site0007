@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>日本电影片库 - 日本电影日剧动漫综艺纪录片高清在线观看</title>
+    <meta name="keywords" content="日本电影片库,日本电影高清在线观看,日本日剧片库,日本动漫电影,日本综艺纪录片,日本电影搜索,日本电影分类,日本影视资源" />
+    <meta name="description" content="日本电影片库收录日本电影、日剧、动漫电影、综艺纪录片等 80+ 高清资源条目，支持关键词搜索、频道分类、热度排序、评分排序和年份排序。" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body data-page="library">
+    <header class="topbar">
+      <a class="logo" href="./index.html">日本电影</a>
+      <nav class="nav" aria-label="主导航">
+        <a href="./index.html">首页</a>
+        <a class="active" href="./library.html">片库</a>
+        <a href="./library.html?kind=电影">电影</a>
+        <a href="./library.html?kind=日剧">日剧</a>
+        <a href="./library.html?kind=动漫电影">动漫</a>
+        <a href="./library.html?kind=综艺纪录">综艺纪录</a>
+      </nav>
+      <a class="search-link" href="#filters">筛选</a>
+    </header>
+
+    <main>
+      <section class="library-hero">
+        <p class="kicker">Video Library</p>
+        <h1>日本电影片库</h1>
+        <p>搜索日本电影、日剧、动漫电影、综艺纪录片，按热度、评分和年份快速筛选。</p>
+      </section>
+
+      <section class="filters" id="filters">
+        <form id="searchForm" class="search-form">
+          <input id="searchInput" type="search" placeholder="搜索片名、类型、年份" />
+          <button type="submit">搜索</button>
+        </form>
+        <div class="filter-buttons">
+          <button data-kind="全部">全部</button>
+          <button data-kind="电影">电影</button>
+          <button data-kind="日剧">日剧</button>
+          <button data-kind="动漫电影">动漫电影</button>
+          <button data-kind="综艺纪录">综艺纪录</button>
+        </div>
+        <select id="sortSelect" aria-label="排序">
+          <option value="hot">热度优先</option>
+          <option value="score">评分优先</option>
+          <option value="year">年份优先</option>
+        </select>
+      </section>
+
+      <section class="strip">
+        <div class="strip-head"><h2 id="libraryTitle">全部视频</h2><span id="resultCount">0 部</span></div>
+        <div class="grid-list" id="libraryGrid"></div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div><strong>日本电影</strong><p>日本影视资源搜索、分类和高清内容推荐。</p></div>
+      <div><h3>频道</h3><a href="./library.html?kind=电影">日本电影</a><a href="./library.html?kind=日剧">热门日剧</a></div>
+      <div><h3>筛选</h3><a href="./library.html?sort=score">高分内容</a><a href="./library.html?sort=year">最新内容</a></div>
+      <div><h3>版权</h3><p>Copyright © 2026 日本电影. All Rights Reserved.</p></div>
+    </footer>
+
+    <script src="./items.js?v=20260707-site0007"></script>
+    <script src="./app.js?v=20260707-site0007"></script>
+  </body>
+</html>
