@@ -62,7 +62,20 @@ function renderHome() {
     <p>${hero.summary}</p>
     <div class="hero-meta"><span>${hero.score} 分</span><span>${hero.year}</span><span>${hero.genre}</span></div>
     <a class="primary-btn" href="${watchHref(hero)}">立即查看</a>`;
-  document.getElementById("quickList").innerHTML = hot.slice(1, 6).map(mini).join("");
+  document.getElementById("quickList").innerHTML = `${hot.slice(1, 6).map(mini).join("")}
+    <div class="quick-divider"></div>
+    <div class="quick-focus">
+      <p class="kicker">今日看点</p>
+      <a href="./library.html?kind=${encodeURIComponent("电影")}"><b>日本电影</b><span>${movies.length} 部精选</span></a>
+      <a href="./library.html?kind=${encodeURIComponent("日剧")}"><b>热门日剧</b><span>${dramas.length} 部追看</span></a>
+      <a href="./library.html?sort=score"><b>高分片单</b><span>按评分浏览</span></a>
+    </div>
+    <div class="quick-tags">
+      <a href="./library.html?sort=year">新片新剧</a>
+      <a href="./library.html?kind=${encodeURIComponent("动漫电影")}">动漫电影</a>
+      <a href="./library.html?q=${encodeURIComponent("家庭")}">家庭题材</a>
+      <a href="./library.html?q=${encodeURIComponent("悬疑")}">悬疑推理</a>
+    </div>`;
   document.getElementById("homeRail").innerHTML = hot.slice(0, 36).map((item, index) => card(item, index < 2)).join("");
   row("日本电影", "经典日影、院线佳作和高分剧情片", movies, "movieRow");
   row("热门日剧", "悬疑、都市、美食、家庭题材一站浏览", dramas, "dramaRow");
